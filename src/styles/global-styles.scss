@@ -1,0 +1,31 @@
+@use './fonts.scss' as *;
+@use './colors' as *;
+
+body {
+    font-family: $font-stack;
+    color: $font-color-primary;
+}
+
+p {
+    font-size: $font-size-paragraph;
+}
+
+h1 {
+    color: $font-color-secondary;
+    font-size: $font-size-h1;
+}
+
+h2 {
+    color: $font-color-secondary;
+    font-size: $font-size-h2;
+}
+
+li {
+    font-size: $font-size-li;
+}
+
+/* Zero-Width Space for better accessibility */
+// https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type#accessibility_concerns
+li::before {
+    content: '\200B';
+}

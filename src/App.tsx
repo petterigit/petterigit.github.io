@@ -9,7 +9,7 @@ import { Footer } from './components/Footer/Footer'
 import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 
-import { articleNavHeaders } from './utils/articleContent'
+import { articleNavHeaders } from './static/articles/articleContent'
 
 export const App = () => {
     return (

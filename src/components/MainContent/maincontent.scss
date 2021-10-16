@@ -5,27 +5,3 @@
     padding-left: 2em;
     padding-right: 2em;
 }
-
-.article-preview {
-    display: grid;
-    column-gap: 2em;
-    grid-template-areas:
-        'header header'
-        'image text';
-}
-
-.article-header {
-    grid-area: header;
-    text-align: center;
-}
-.article-image {
-    grid-area: image;
-    justify-self: end;
-    max-width: 100%;
-    max-height: 12em;
-}
-.article-text {
-    justify-self: start;
-    grid-area: text;
-    max-width: 600px;
-}

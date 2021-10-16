@@ -1,8 +1,5 @@
 export type ArticleProps = {
-    header: string
-    imgsrc: string
-    text: string
-    articleLinks: string[]
+    mdFile: string
 }
 
 export type MainContentProps = {

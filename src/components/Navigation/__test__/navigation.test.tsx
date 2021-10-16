@@ -5,10 +5,7 @@ import { render } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { App } from '../../../App'
 
-import {
-    articleNavHeaders,
-    articleNavHeadersEmpty,
-} from '../../../utils/articleTestContent'
+import { articleNavHeaders } from '../../../static/articles/articleContent'
 
 test('Navigation bar renders', () => {
     const { getByTestId } = render(
@@ -36,14 +33,4 @@ test('Navigation through buttons works', () => {
         userEvent.click(navButton, leftClick)
         expect(window.location.pathname).toEqual(pageRef)
     }
-})
-
-test('Navigation bar renders with empty nav headers', () => {
-    const { getByTestId } = render(
-        <Router>
-            <Navigation articleNavHeaders={articleNavHeadersEmpty} />
-        </Router>
-    )
-    const navigationBar = getByTestId('navigation-bar')
-    expect(navigationBar).toBeTruthy()
 })

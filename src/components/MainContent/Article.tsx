@@ -1,32 +1,31 @@
 import './maincontent.scss'
 import { ArticleProps } from '../../types/propTypes'
 
-export const Article = ({
-    header,
-    imgsrc,
-    text,
-    articleLinks,
-}: ArticleProps) => {
+import MarkdownIt from 'markdown-it'
+import { useEffect, useState } from 'react'
+
+export const Article = ({ mdFile }: ArticleProps) => {
+    const [articleHtml, setArticleHtml] = useState(
+        '<h2> Getting article.. </h2>'
+    )
+
+    useEffect(() => {
+        const md = new MarkdownIt()
+        fetch(mdFile)
+            .then((response) => response.text())
+            .then((text) => {
+                const htmlString = md.render(text)
+                setArticleHtml(htmlString)
+            })
+    }, [mdFile])
     return (
         <article className="app-main" data-testid="article">
-            <div className="article-preview">
-                <h2 className="article-header">{header}</h2>
-                <img
-                    className="article-image"
-                    src={imgsrc}
-                    alt="Project Preview"
-                />
-                <div className="article-text">
-                    <p>{text}</p>
-                    {articleLinks && (
-                        <ul>
-                            {articleLinks.map((link, i) => (
-                                <li key={i}>{link}</li>
-                            ))}
-                        </ul>
-                    )}
-                </div>
-            </div>
+            <div
+                className="article-preview"
+                dangerouslySetInnerHTML={{
+                    __html: articleHtml,
+                }}
+            ></div>
         </article>
     )
 }

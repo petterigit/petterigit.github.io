@@ -24,10 +24,10 @@ export const ThreeModel = () => {
 
     useEffect(() => {
         const scene = createScene()
-        const camera = createCamera(0, 0.239, 0.261, -0.239, 0.022, 0)
+        const camera = createCamera(0, 0.75, 1.25, 0, 0, 0)
         const renderer = createRenderer()
-        const light1 = createLight(1, 6, 8)
-        const light2 = createLight(-1, 6, 8)
+        const light1 = createLight(1, 8, 8)
+        const light2 = createLight(-1, 4, 8)
         //const clock = new THREE.Clock()
 
         const loader = new GLTFLoader()

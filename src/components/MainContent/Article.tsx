@@ -2,6 +2,7 @@ import './maincontent.scss'
 import { ArticleProps } from '../../types/propTypes'
 
 import MarkdownIt from 'markdown-it'
+
 import { useEffect, useState } from 'react'
 
 export const Article = ({ mdFile }: ArticleProps) => {
@@ -10,7 +11,7 @@ export const Article = ({ mdFile }: ArticleProps) => {
     )
 
     useEffect(() => {
-        const md = new MarkdownIt()
+        const md = new MarkdownIt({ html: true })
         fetch(mdFile)
             .then((response) => response.text())
             .then((text) => {
@@ -19,7 +20,7 @@ export const Article = ({ mdFile }: ArticleProps) => {
             })
     }, [mdFile])
     return (
-        <article className="app-main" data-testid="article">
+        <article data-testid="article">
             <div
                 className="article-preview"
                 dangerouslySetInnerHTML={{

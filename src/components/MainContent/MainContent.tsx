@@ -8,7 +8,7 @@ import { articles } from '../../static/articles/articleContent'
 
 export const MainContent = () => {
     return (
-        <div data-testid="mainContent">
+        <div className="app-main" data-testid="mainContent">
             <Switch>
                 {articles.map((article) => (
                     <Route key={article.path} exact path={article.path}>

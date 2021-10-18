@@ -4,4 +4,8 @@
     background-color: $background-color-primary;
     padding-left: 2em;
     padding-right: 2em;
+
+    img {
+        max-width: 128px;
+    }
 }

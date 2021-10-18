@@ -2,6 +2,7 @@ import './maincontent.scss'
 import { ArticleProps } from '../../types/propTypes'
 
 import MarkdownIt from 'markdown-it'
+
 import { useEffect, useState } from 'react'
 
 export const Article = ({ mdFile }: ArticleProps) => {
@@ -10,11 +11,12 @@ export const Article = ({ mdFile }: ArticleProps) => {
     )
 
     useEffect(() => {
-        const md = new MarkdownIt()
+        const md = new MarkdownIt({ html: true })
         fetch(mdFile)
             .then((response) => response.text())
             .then((text) => {
                 const htmlString = md.render(text)
+                console.log(htmlString)
                 setArticleHtml(htmlString)
             })
     }, [mdFile])

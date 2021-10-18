@@ -8,12 +8,14 @@ import { articles } from '../../static/articles/articleContent'
 
 export const MainContent = () => {
     return (
-        <Switch>
-            {articles.map((article) => (
-                <Route key={article.path} exact path={article.path}>
-                    <Article mdFile={article.mdFile} />
-                </Route>
-            ))}
-        </Switch>
+        <div className="app-main" data-testid="mainContent">
+            <Switch>
+                {articles.map((article) => (
+                    <Route key={article.path} exact path={article.path}>
+                        <Article mdFile={article.mdFile} />
+                    </Route>
+                ))}
+            </Switch>
+        </div>
     )
 }

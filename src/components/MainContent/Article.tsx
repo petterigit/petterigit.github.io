@@ -16,12 +16,11 @@ export const Article = ({ mdFile }: ArticleProps) => {
             .then((response) => response.text())
             .then((text) => {
                 const htmlString = md.render(text)
-                console.log(htmlString)
                 setArticleHtml(htmlString)
             })
     }, [mdFile])
     return (
-        <article className="app-main" data-testid="article">
+        <article data-testid="article">
             <div
                 className="article-preview"
                 dangerouslySetInnerHTML={{

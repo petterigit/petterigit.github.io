@@ -9,5 +9,5 @@ GitHub
 [![React](./articleElements/react-logo-128.png 'React')](https://reactjs.org/)
 [![Jest](./articleElements/jest-logo-128.png 'Jest')](https://jestjs.io/)
 [![Sass](./articleElements/sass-logo-128.png 'Sass')](https://sass-lang.com/)
-[![ThreeJS](./articleElements/threejs-logo-128.svg 'ThreeJS')](https://threejs.org/)
+[![ThreeJS](./articleElements/threejs-logo-128.png 'ThreeJS')](https://threejs.org/)
 [![Blender](./articleElements/blender-logo-128.svg 'Blender')](https://www.blender.org/)

@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.1ec0d566.chunk.css",
-    "main.js": "/static/js/main.a12b8208.chunk.js",
-    "main.js.map": "/static/js/main.a12b8208.chunk.js.map",
+    "main.js": "/static/js/main.b2362e72.chunk.js",
+    "main.js.map": "/static/js/main.b2362e72.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.100feaf5.js",
     "runtime-main.js.map": "/static/js/runtime-main.100feaf5.js.map",
     "static/js/2.3042e07b.chunk.js": "/static/js/2.3042e07b.chunk.js",
@@ -13,13 +13,13 @@
     "static/css/main.1ec0d566.chunk.css.map": "/static/css/main.1ec0d566.chunk.css.map",
     "static/js/2.3042e07b.chunk.js.LICENSE.txt": "/static/js/2.3042e07b.chunk.js.LICENSE.txt",
     "static/media/cah.5cb71714.md": "/static/media/cah.5cb71714.md",
-    "static/media/vilperi.b12c0286.md": "/static/media/vilperi.b12c0286.md",
+    "static/media/vilperi.79c56b2b.md": "/static/media/vilperi.79c56b2b.md",
     "static/media/vilperi.c752422f.glb": "/static/media/vilperi.c752422f.glb"
   },
   "entrypoints": [
     "static/js/runtime-main.100feaf5.js",
     "static/js/2.3042e07b.chunk.js",
     "static/css/main.1ec0d566.chunk.css",
-    "static/js/main.a12b8208.chunk.js"
+    "static/js/main.b2362e72.chunk.js"
   ]
 }

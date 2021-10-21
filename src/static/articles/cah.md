@@ -2,8 +2,6 @@
 
 A project of two of my friends I have had the utmost pleasure to develop!
 
-GitHub  
-[CAH Git Link](https://github.com/Nikug/cards-against-humanity)
+<a href="https://github.com/Nikug/cards-against-humanity" target="_blank">CAH GitHub Repository</a>
 
-Website link  
-[CAH Website Link](https://pelit.space/)
+<a href="https://pelit.space/" target="_blank">CAH Website</a>

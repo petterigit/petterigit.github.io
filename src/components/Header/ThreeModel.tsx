@@ -28,7 +28,9 @@ export const ThreeModel = () => {
         const renderer = createRenderer()
         const light1 = createLight(1, 8, 8)
         const light2 = createLight(-1, 4, 8)
-        //const clock = new THREE.Clock()
+        const clock = new THREE.Clock()
+
+        let mixer: THREE.AnimationMixer
 
         const loader = new GLTFLoader()
         loader.load(
@@ -37,6 +39,13 @@ export const ThreeModel = () => {
                 let model = gltf.scene
                 scene.add(model)
 
+                mixer = new THREE.AnimationMixer(model)
+                const clips = gltf.animations
+                const clip = THREE.AnimationClip.findByName(clips, 'Idle')
+                const action = mixer.clipAction(clip)
+                action.play()
+
+                tick()
                 //createGUI( model, gltf.animations );
             },
             undefined,
@@ -57,14 +66,18 @@ export const ThreeModel = () => {
             scene.add(pointLightHelper2)
         }
 
-        /* Render */
-        const tick = () => {
-            //const elapsedTime = clock.getElapsedTime()
+        /* Animations */
 
+        /* Render */
+
+        const tick = () => {
+            const deltaTime = clock.getDelta()
+            if (mixer) {
+                mixer.update(deltaTime)
+            }
             renderer.render(scene, camera)
             window.requestAnimationFrame(tick)
         }
-        tick()
 
         mountRef.current.appendChild(renderer.domElement)
     }, [mountRef])

@@ -17,17 +17,17 @@ type tweakPaneTypes = {
     camera: THREE.PerspectiveCamera
 }
 
-const DEBUG = false
+const DEBUG = true
 
 export const ThreeModel = () => {
     const mountRef = useRef<HTMLDivElement>(document.createElement('div'))
 
     useEffect(() => {
         const scene = createScene()
-        const camera = createCamera(0, 0.75, 1.25, 0, 0, 0)
+        const camera = createCamera(0, 0.95, 1.15, -0.2, 0.065, 0)
         const renderer = createRenderer()
-        const light1 = createLight(1, 8, 8)
-        const light2 = createLight(-1, 4, 8)
+        const light1 = createLight(2, 1, 6)
+        const light2 = createLight(-2, 1, 6)
         const clock = new THREE.Clock()
 
         let mixer: THREE.AnimationMixer
@@ -117,9 +117,8 @@ const createRenderer = () => {
 }
 
 const createLight = (posX: number, posY: number, posZ: number) => {
-    const pointLight = new THREE.PointLight(0xffffff, 1.5)
+    const pointLight = new THREE.PointLight(0xffffff, 1.1)
     pointLight.position.set(posX, posY, posZ)
-    pointLight.intensity = 1.4
     return pointLight
 }
 
@@ -147,17 +146,17 @@ const addTweakPane = ({ pane, light, camera }: tweakPaneTypes) => {
     const cameraFolder = pane.addFolder({ title: 'Camera' })
     cameraFolder.addInput(camera.position, 'x', {
         min: -1,
-        max: 1,
+        max: 4,
         step: 0.001,
     })
     cameraFolder.addInput(camera.position, 'y', {
         min: -1,
-        max: 1,
+        max: 4,
         step: 0.001,
     })
     cameraFolder.addInput(camera.position, 'z', {
         min: -1,
-        max: 1,
+        max: 10,
         step: 0.001,
     })
     cameraFolder.addInput(camera.rotation, 'x', {

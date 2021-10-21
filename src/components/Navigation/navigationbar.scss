@@ -28,6 +28,8 @@
         font-size: $font-size-navigation-bar;
         text-transform: uppercase;
         text-decoration: none;
+        display: inline-block;
+        width: 100%;
     }
     :visited {
         color: $font-color-primary;

@@ -7,7 +7,7 @@ const pageRefs = {
 }
 
 export const articleNavHeaders = [
-    { text: 'vilperi.me', ref: '.' + pageRefs.vilperiMe },
+    { text: 'About', ref: '.' + pageRefs.vilperiMe },
     { text: 'Cards Against Humanity', ref: '.' + pageRefs.cah },
 ]
 

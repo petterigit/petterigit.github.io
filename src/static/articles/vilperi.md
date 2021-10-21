@@ -1,4 +1,4 @@
-# Hello and welcome to my site!
+# About this site
 
 ---
 

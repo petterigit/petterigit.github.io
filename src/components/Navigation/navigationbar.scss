@@ -29,6 +29,12 @@
         text-transform: uppercase;
         text-decoration: none;
     }
+    :visited {
+        color: $font-color-primary;
+    }
+    :link {
+        color: $font-color-primary;
+    }
 
     background-color: $background-color-highlight;
 }

@@ -17,7 +17,7 @@ type tweakPaneTypes = {
     camera: THREE.PerspectiveCamera
 }
 
-const DEBUG = true
+const DEBUG = false
 
 export const ThreeModel = () => {
     const mountRef = useRef<HTMLDivElement>(document.createElement('div'))

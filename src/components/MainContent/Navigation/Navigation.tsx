@@ -11,7 +11,11 @@ export const Navigation = ({ articleNavHeaders }: HeaderProps) => {
                 <ul>
                     {articleNavHeaders.map((header, i) => (
                         <li key={i}>
-                            <Link to={header.ref} data-testid={header.text}>
+                            <Link
+                                replace
+                                to={header.ref}
+                                data-testid={header.text}
+                            >
                                 {header.text}
                             </Link>
                         </li>

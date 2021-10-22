@@ -36,3 +36,7 @@ li {
 li::before {
     content: '\200B';
 }
+
+.simplebar-scrollbar::before {
+    background-color: $background-color-editor-nav-hover;
+}

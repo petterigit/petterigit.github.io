@@ -5,8 +5,8 @@ export const HeaderText = () => {
         <div className="header-text-container" data-testid="headerText">
             <h1 className="header-text">Hello!</h1>
             <p className="header-text">
-                Welcome to my website! See contact info below. In the articles,
-                you can find more about what I do.
+                Welcome to my website! Find more about what this page and many
+                other projects below!
             </p>
             <address className="header-socials">
                 <ul>

@@ -31,6 +31,6 @@ test('Navigation through buttons works', () => {
         const navButton = getByTestId(buttonText)
         expect(navButton).toHaveTextContent(buttonText)
         userEvent.click(navButton, leftClick)
-        expect(window.location.pathname).toEqual(pageRef)
+        expect(window.location.hash).toEqual('#' + pageRef)
     }
 })

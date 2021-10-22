@@ -2,6 +2,8 @@ import './maincontent.scss'
 import { ArticleProps } from '../../types/propTypes'
 
 import MarkdownIt from 'markdown-it'
+import SimpleBar from 'simplebar-react'
+import 'simplebar/dist/simplebar.min.css'
 
 import { useEffect, useState } from 'react'
 
@@ -21,12 +23,16 @@ export const Article = ({ mdFile }: ArticleProps) => {
     }, [mdFile])
     return (
         <article data-testid="article">
-            <div
-                className="article-preview"
-                dangerouslySetInnerHTML={{
-                    __html: articleHtml,
-                }}
-            ></div>
+            <div className="article">
+                <SimpleBar style={{ maxHeight: '60vh' }}>
+                    <p
+                        className="article-text"
+                        dangerouslySetInnerHTML={{
+                            __html: articleHtml,
+                        }}
+                    ></p>
+                </SimpleBar>
+            </div>
         </article>
     )
 }

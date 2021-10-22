@@ -1,11 +1,17 @@
 @use '../../styles/colors' as *;
 
 .app-main {
-    background-color: $background-color-primary;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding-top: 1em;
+    background-color: $background-color-editor;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
     img {
         max-width: 80vw;
     }
+}
+
+.article-preview {
+    padding-left: 2em;
+    padding-right: 2em;
 }

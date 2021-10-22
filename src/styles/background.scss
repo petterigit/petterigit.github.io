@@ -1,4 +1,5 @@
 @import './colors.scss';
+@import './media-breakpoints';
 
 /* Background license information: https://unsplash.com/license */
 html {
@@ -8,10 +9,13 @@ html {
     -o-background-size: cover;
     background-size: cover;
 
-    background: rgb(65, 3, 3);
-    background: linear-gradient(
-        0deg,
-        rgba(65, 3, 3, 0.75) 0%,
-        rgba(164, 124, 124, 0.75) 100%
-    );
+    background-color: $background-color-primary;
+
+    @media (min-width: $tablet-bp) {
+        background-image: radial-gradient(
+            circle at right,
+            $background-color-highlight,
+            $background-color-primary 30%
+        );
+    }
 }

@@ -2,8 +2,16 @@ export type ArticleProps = {
     mdFile: string
 }
 
+export type ArticleHeaderProps = {
+    toggleArticle: () => void
+}
+
+export type EasterArticleProps = {
+    toggleArticle: () => void
+}
+
 export type MainContentProps = {
-    articleNumber: number
+    toggleArticle: () => void
 }
 
 export type HeaderProps = {

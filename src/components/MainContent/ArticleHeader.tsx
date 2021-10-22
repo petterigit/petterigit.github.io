@@ -3,8 +3,9 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { CommitRes } from '../../types/httpTypes'
+import { ArticleHeaderProps } from '../../types/propTypes'
 
-export const ArticleHeader = () => {
+export const ArticleHeader = ({ toggleArticle }: ArticleHeaderProps) => {
     const [modifiedDate, setModifiedDate] = useState('')
 
     useEffect(() => {
@@ -22,5 +23,12 @@ export const ArticleHeader = () => {
             })
     }, [])
 
-    return <p className="app-main-header-text"> vilperi.me {modifiedDate}</p>
+    return (
+        <div className="app-main-header">
+            <p className="app-main-header-text"> vilperi.me {modifiedDate}</p>
+            <button onClick={toggleArticle} className="app-main-header-exit">
+                X
+            </button>
+        </div>
+    )
 }

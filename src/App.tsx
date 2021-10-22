@@ -3,7 +3,7 @@ import './styles/background.scss'
 import { Header } from './components/Header/Header'
 import { MainContent } from './components/MainContent/MainContent'
 import { Footer } from './components/Footer/Footer'
-import { EasterArticle } from './components/EasterArticle'
+import { EasterArticle } from './components/MainContent/EasterArticle'
 
 import React from 'react'
 import { useState } from 'react'

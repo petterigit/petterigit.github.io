@@ -1,7 +1,7 @@
 @use '../../styles/colors' as *;
+@use '../../styles/fonts' as *;
 
 .app-main {
-    padding-top: 1em;
     background-color: $background-color-editor;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -14,4 +14,10 @@
 .article-preview {
     padding-left: 2em;
     padding-right: 2em;
+}
+
+.app-main-header-text {
+    font-size: $font-size-small-paragraph;
+    text-align: center;
+    margin: 0;
 }

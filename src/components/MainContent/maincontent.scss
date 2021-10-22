@@ -1,5 +1,6 @@
 @use '../../styles/colors' as *;
 @use '../../styles/fonts' as *;
+@use '../../styles/media-breakpoints' as *;
 
 .app-main {
     background-color: $background-color-editor;
@@ -11,7 +12,15 @@
     }
 }
 
-.article-preview {
+.article {
+    max-height: 80vh;
+    @media (min-width: $tablet-bp) {
+        max-height: 60vh;
+    }
+    overflow-y: auto;
+}
+
+.article-text {
     padding-left: 2em;
     padding-right: 2em;
 }

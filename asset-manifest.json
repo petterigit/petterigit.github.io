@@ -1,25 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.5f2b29be.chunk.css",
-    "main.js": "/static/js/main.0c76aa98.chunk.js",
-    "main.js.map": "/static/js/main.0c76aa98.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.3dfe6276.js",
-    "runtime-main.js.map": "/static/js/runtime-main.3dfe6276.js.map",
-    "static/js/2.01e9a50e.chunk.js": "/static/js/2.01e9a50e.chunk.js",
-    "static/js/2.01e9a50e.chunk.js.map": "/static/js/2.01e9a50e.chunk.js.map",
-    "static/js/3.7862ad04.chunk.js": "/static/js/3.7862ad04.chunk.js",
-    "static/js/3.7862ad04.chunk.js.map": "/static/js/3.7862ad04.chunk.js.map",
+    "main.css": "/static/css/main.54f124cb.chunk.css",
+    "main.js": "/static/js/main.96b041c4.chunk.js",
+    "main.js.map": "/static/js/main.96b041c4.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.71077d8b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.71077d8b.js.map",
+    "static/css/2.a2825889.chunk.css": "/static/css/2.a2825889.chunk.css",
+    "static/js/2.63aed8e7.chunk.js": "/static/js/2.63aed8e7.chunk.js",
+    "static/js/2.63aed8e7.chunk.js.map": "/static/js/2.63aed8e7.chunk.js.map",
+    "static/js/3.bba81686.chunk.js": "/static/js/3.bba81686.chunk.js",
+    "static/js/3.bba81686.chunk.js.map": "/static/js/3.bba81686.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.5f2b29be.chunk.css.map": "/static/css/main.5f2b29be.chunk.css.map",
-    "static/js/2.01e9a50e.chunk.js.LICENSE.txt": "/static/js/2.01e9a50e.chunk.js.LICENSE.txt",
+    "static/css/2.a2825889.chunk.css.map": "/static/css/2.a2825889.chunk.css.map",
+    "static/css/main.54f124cb.chunk.css.map": "/static/css/main.54f124cb.chunk.css.map",
+    "static/js/2.63aed8e7.chunk.js.LICENSE.txt": "/static/js/2.63aed8e7.chunk.js.LICENSE.txt",
     "static/media/projects.8fda411e.md": "/static/media/projects.8fda411e.md",
-    "static/media/vilperi.135d13d9.md": "/static/media/vilperi.135d13d9.md",
+    "static/media/vilperi.17b74c95.md": "/static/media/vilperi.17b74c95.md",
     "static/media/vilperi.ab8dd659.glb": "/static/media/vilperi.ab8dd659.glb"
   },
   "entrypoints": [
-    "static/js/runtime-main.3dfe6276.js",
-    "static/js/2.01e9a50e.chunk.js",
-    "static/css/main.5f2b29be.chunk.css",
-    "static/js/main.0c76aa98.chunk.js"
+    "static/js/runtime-main.71077d8b.js",
+    "static/css/2.a2825889.chunk.css",
+    "static/js/2.63aed8e7.chunk.js",
+    "static/css/main.54f124cb.chunk.css",
+    "static/js/main.96b041c4.chunk.js"
   ]
 }

@@ -363,3 +363,7 @@ ul {
 a {
     color: inherit;
 }
+
+address {
+    all: initial;
+}

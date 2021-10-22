@@ -1,14 +1,14 @@
 import vilperiMeMD from './vilperi.md'
-import cardsAgainstHumanityMD from './cah.md'
+import cardsAgainstHumanityMD from './projects.md'
 
 const pageRefs = {
     vilperiMe: '/',
-    cah: '/cah',
+    cah: '/projects',
 }
 
 export const articleNavHeaders = [
     { text: 'About', ref: '.' + pageRefs.vilperiMe },
-    { text: 'Cards Against Humanity', ref: '.' + pageRefs.cah },
+    { text: 'Projects', ref: '.' + pageRefs.cah },
 ]
 
 export const articles = [

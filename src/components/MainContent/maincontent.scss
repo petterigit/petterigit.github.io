@@ -14,9 +14,7 @@
 
 .article {
     max-height: 80vh;
-    @media (min-width: $tablet-bp) {
-        max-height: 60vh;
-    }
+    min-height: 256px;
     overflow-y: auto;
 }
 

@@ -1,6 +1,5 @@
 import './styles/layout-styles.scss'
 import './styles/background.scss'
-import './styles/app.scss'
 import { Header } from './components/Header/Header'
 import { Navigation } from './components/Navigation/Navigation'
 import { MainContent } from './components/MainContent/MainContent'

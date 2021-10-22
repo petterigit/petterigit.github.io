@@ -1,6 +1,6 @@
 import React from 'react'
 import './navigationbar.scss'
-import { HeaderProps } from '../../types/propTypes'
+import { HeaderProps } from '../../../types/propTypes'
 
 import { Link } from 'react-router-dom'
 

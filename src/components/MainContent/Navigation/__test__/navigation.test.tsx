@@ -3,9 +3,9 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { Navigation } from '../Navigation'
 import { render } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { App } from '../../../App'
+import { App } from '../../../../App'
 
-import { articleNavHeaders } from '../../../static/articles/articleContent'
+import { articleNavHeaders } from '../../../../static/articles/articleContent'
 
 test('Navigation bar renders', () => {
     const { getByTestId } = render(

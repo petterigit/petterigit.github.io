@@ -50,7 +50,9 @@
 }
 .header-socials {
     width: min-content;
-    float: right;
+    @media (min-width: $tablet-bp) {
+        float: right;
+    }
     white-space: nowrap;
 
     a[href^='mailto']::before {

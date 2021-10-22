@@ -1,16 +1,19 @@
 import './maincontent.scss'
 import { Article } from './Article'
 import { Navigation } from './Navigation/Navigation'
+import { ArticleHeader } from './ArticleHeader'
 
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 import { articles } from '../../static/articles/articleContent'
 import { articleNavHeaders } from '../../static/articles/articleContent'
+import { MainContentProps } from '../../types/propTypes'
 
-export const MainContent = () => {
+export const MainContent = ({ toggleArticle }: MainContentProps) => {
     return (
         <div className="app-main" data-testid="mainContent">
+            <ArticleHeader toggleArticle={toggleArticle} />
             <Navigation articleNavHeaders={articleNavHeaders} />
             <Switch>
                 {articles.map((article) => (

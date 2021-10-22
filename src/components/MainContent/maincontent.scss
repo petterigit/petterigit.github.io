@@ -1,7 +1,7 @@
 @use '../../styles/colors' as *;
+@use '../../styles/fonts' as *;
 
 .app-main {
-    padding-top: 1em;
     background-color: $background-color-editor;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -14,4 +14,32 @@
 .article-preview {
     padding-left: 2em;
     padding-right: 2em;
+}
+
+.app-main-header {
+    display: flex;
+    justify-content: center;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.app-main-header-text {
+    font-size: $font-size-small-paragraph;
+    margin: 0;
+    margin-left: auto;
+}
+
+.app-main-header-exit {
+    /* Reset CSS */
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+
+    display: inline;
+    margin-left: auto;
+    font-size: 0.5rem;
 }

@@ -7,7 +7,7 @@ import { EasterArticle } from './components/MainContent/EasterArticle'
 
 import React from 'react'
 import { useState } from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { HashRouter as Router } from 'react-router-dom'
 
 export const App = () => {
     const [articleIsNotHidden, setArticleIsNotHidden] = useState(true)

@@ -16,6 +16,17 @@
     max-height: 80vh;
     min-height: 256px;
     overflow-y: auto;
+
+    /* Table styling */
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th {
+        background: $background-color-editor-nav;
+    }
 }
 
 .article-text {

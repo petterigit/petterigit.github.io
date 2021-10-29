@@ -1,12 +1,12 @@
 import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { Article } from '../Article'
-import { render } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 
-const props = { header: '', imgsrc: '', text: '', articleLinks: [''] }
+const props = { mdFile: '' }
 
 test('Article renders', () => {
-    const { getByTestId } = render(<Article {...props} />)
-    const article = getByTestId('article')
+    render(<Article {...props} />)
+    const article = screen.getByRole('article')
     expect(article).toBeTruthy()
 })

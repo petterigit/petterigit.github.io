@@ -17,7 +17,7 @@ export const App = () => {
     }
     return (
         <Router>
-            <div className="app" data-testid="app">
+            <div className="app" role="main">
                 <Header />
                 {articleIsNotHidden ? (
                     <MainContent toggleArticle={toggleArticle} />

@@ -5,7 +5,7 @@ import { HeaderText } from './HeaderText'
 
 export const Header = () => {
     return (
-        <header className="header" data-testid="header">
+        <header className="header">
             {/* Extra container to push content sideways*/}
             <div className="header-extra-container" />
             <HeaderText />

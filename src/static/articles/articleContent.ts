@@ -1,17 +1,17 @@
 import vilperiMeMD from './vilperi.md'
 import cardsAgainstHumanityMD from './projects.md'
-import scrabbleMD from './scrabble.md'
+import crosswordsMD from './crosswords.md'
 
 const pageRefs = {
     vilperiMe: '/',
     cah: '/projects',
-    scrabble: '/scrabble',
+    crosswords: '/crosswords',
 }
 
 export const articleNavHeaders = [
-    { text: 'About', ref: '.' + pageRefs.vilperiMe },
-    { text: 'Projects', ref: '.' + pageRefs.cah },
-    { text: 'Scrabble', ref: '.' + pageRefs.scrabble },
+    { text: 'About', ref: pageRefs.vilperiMe },
+    { text: 'Projects', ref: pageRefs.cah },
+    { text: 'Crosswords', ref: pageRefs.crosswords },
 ]
 
 export const articles = [
@@ -24,7 +24,7 @@ export const articles = [
         mdFile: cardsAgainstHumanityMD,
     },
     {
-        path: pageRefs.scrabble,
-        mdFile: scrabbleMD,
+        path: pageRefs.crosswords,
+        mdFile: crosswordsMD,
     },
 ]

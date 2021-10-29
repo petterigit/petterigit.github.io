@@ -1,4 +1,4 @@
-# Scrabble
+# Crosswords
 
 We play Scrabble with a few friends on a weekly basis. In the digital world, features such as word-checking, online-play, or getting your scrabble-skills mocked by an AI can be brought to life.
 

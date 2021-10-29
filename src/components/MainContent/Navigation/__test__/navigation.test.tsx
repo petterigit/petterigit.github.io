@@ -27,7 +27,7 @@ test('Navigation through buttons works', () => {
     const leftClick = { button: 0 }
     for (let i = 0; i < articleNavHeaders.length; i++) {
         const buttonText = articleNavHeaders[i].text
-        const pageRef = articleNavHeaders[i].ref.substring(1)
+        const pageRef = articleNavHeaders[i].ref
         const navButton = getByTestId(buttonText)
         expect(navButton).toHaveTextContent(buttonText)
         userEvent.click(navButton, leftClick)

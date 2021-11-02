@@ -1,7 +1,5 @@
 # About this site
 
----
-
 GitHub  
 <a href="https://github.com/petterigit/petterigit.github.io" target="_blank">Website Git Link</a>
 

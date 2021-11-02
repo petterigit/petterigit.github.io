@@ -39,7 +39,7 @@ test('GameModeButton takes in props', () => {
 
 ---
 
-## ARIA Roles
+## Accessibility through ARIA roles
 
 Not only do ARIA roles make the outputted HTML more accessible, they also help with unnecessary cluttering in test queries. Check it out! You can learn more about ARIA roles on [MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles).
 
@@ -65,4 +65,87 @@ test('MainContent renders', () => {
     const mainContent = screen.getByRole('main')
     expect(mainContent).toBeTruthy()
 })
+```
+
+---
+
+## Refs for tracking React components
+
+For the time being, I am quite proud of the solution below. Using React refs, it's possible to create mouse listeners that listen to react components accurately. The component below creates a dropdown menu, that when clicked displays the dropdown. When user clicks outside of the dropdown, it closes. Extra points for being generic through prop children!
+
+```ts
+import React from 'react'
+import { HeaderMenuProps, HeaderDropDownMenuProps } from '../../types/propTypes'
+import { useState, useEffect, useRef } from 'react'
+
+import './header.scss'
+
+export const HeaderMenu = ({ title, children }: HeaderMenuProps) => {
+    const [dropdownVisibility, setDropdownVisibility] = useState(false)
+
+    const dropdownRef = useRef<HTMLUListElement>(null)
+    CreateDropdownListener(
+        dropdownRef,
+        dropdownVisibility,
+        setDropdownVisibility
+    )
+
+    return (
+        <li>
+            <button
+                aria-haspopup="true"
+                className="header-menu-button"
+                title={title}
+                onClick={() => setDropdownVisibility(!dropdownVisibility)}
+            >
+                {title}
+            </button>
+            {dropdownVisibility && (
+                <HeaderDropDownMenu
+                    ref={dropdownRef}
+                    title={`${title} Dropdown`}
+                >
+                    {children}
+                </HeaderDropDownMenu>
+            )}
+        </li>
+    )
+}
+
+const HeaderDropDownMenu = React.forwardRef<
+    HTMLUListElement,
+    HeaderDropDownMenuProps
+>(({ title, children }, ref) => (
+    <ul ref={ref} className="header-menu-drop" role="menu" title={title}>
+        {children}
+    </ul>
+))
+
+const CreateDropdownListener = (
+    dropdownRef: React.RefObject<HTMLUListElement>,
+    dropdownVisibility: boolean,
+    setDropdownVisibility: React.Dispatch<React.SetStateAction<boolean>>
+) => {
+    /* Using Refs to handle eventListener for clicks outside of dropdown menu */
+
+    useEffect(() => {
+        // Create eventListener Callback
+        const handleClickOutside = (event: MouseEvent) => {
+            if (
+                dropdownRef.current &&
+                !dropdownRef.current.contains(event.target as Node)
+            ) {
+                setDropdownVisibility(!dropdownVisibility)
+            }
+        }
+
+        // Bind callback function
+        document.addEventListener('mousedown', handleClickOutside)
+
+        return () => {
+            // Cleanup callback function when unmounting component
+            document.removeEventListener('mousedown', handleClickOutside)
+        }
+    }, [dropdownRef, dropdownVisibility, setDropdownVisibility])
+}
 ```

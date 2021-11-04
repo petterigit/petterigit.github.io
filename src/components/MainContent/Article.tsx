@@ -8,7 +8,6 @@ import 'simplebar/dist/simplebar.min.css'
 import '../../styles/prism.css'
 import { useEffect, useState } from 'react'
 
-// Old-code
 /* Add prism for typescript when calling Window */
 declare global {
     interface Window {

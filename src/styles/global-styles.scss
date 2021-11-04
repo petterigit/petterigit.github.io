@@ -1,5 +1,6 @@
 @use './fonts.scss' as *;
 @use './colors' as *;
+@use './media-breakpoints' as *;
 
 body {
     font-family: $font-stack;
@@ -15,20 +16,32 @@ a:visited {
 
 p {
     font-size: $font-size-paragraph;
+    @media (min-width: $tablet-bp) {
+        font-size: $font-size-paragraph-desktop;
+    }
 }
 
 h1 {
     color: $font-color-secondary;
     font-size: $font-size-h1;
+    @media (min-width: $tablet-bp) {
+        font-size: $font-size-h1-desktop;
+    }
 }
 
 h2 {
     color: $font-color-secondary;
     font-size: $font-size-h2;
+    @media (min-width: $tablet-bp) {
+        font-size: $font-size-h2-desktop;
+    }
 }
 
 li {
     font-size: $font-size-li;
+    @media (min-width: $tablet-bp) {
+        font-size: $font-size-li-desktop;
+    }
 }
 
 /* Zero-Width Space for better accessibility */

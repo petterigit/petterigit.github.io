@@ -79,7 +79,7 @@ This app was created with Create React App & the TypeScript template. Everything
 
 ### _Navigation.tsx_
 
-```tsx
+```typescript
 import React from 'react'
 import './navigationbar.scss'
 import { HeaderProps } from '../../../types/propTypes'

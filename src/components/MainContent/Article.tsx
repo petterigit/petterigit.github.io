@@ -4,9 +4,17 @@ import { ArticleProps } from '../../types/propTypes'
 import MarkdownIt from 'markdown-it'
 import SimpleBar from 'simplebar-react'
 import 'simplebar/dist/simplebar.min.css'
-import '../../styles/prism.css'
 
+import '../../styles/prism.css'
 import { useEffect, useState } from 'react'
+
+// Old-code
+/* Add prism for typescript when calling Window */
+declare global {
+    interface Window {
+        Prism: any
+    }
+}
 
 export const Article = ({ mdFile }: ArticleProps) => {
     const [articleHtml, setArticleHtml] = useState(
@@ -20,8 +28,6 @@ export const Article = ({ mdFile }: ArticleProps) => {
             .then((text) => {
                 const htmlString = md.render(text)
                 setArticleHtml(htmlString)
-
-                // Reload prism highlighting for dynamic content
                 window.Prism?.highlightAll()
             })
     }, [mdFile])

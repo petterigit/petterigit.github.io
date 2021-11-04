@@ -32,46 +32,46 @@ This app was created with Create React App & the TypeScript template. Everything
 @use '../../../styles/fonts' as *;
 
 .navigation-bar {
-    /* Layout */
+  /* Layout */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: $background-color-editor-nav;
+  padding-left: 2em;
+  padding-right: 2em;
+
+  ul {
+    flex-basis: 100%;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: $background-color-editor-nav;
-    padding-left: 2em;
-    padding-right: 2em;
+    flex-direction: row;
+    align-content: center;
+  }
+  li {
+    flex: 1 1 none;
+    text-align: center;
+    cursor: pointer;
+    border-right: 1px solid $black;
+  }
+  li:last-child {
+    border-right: none;
+  }
+  li:hover {
+    background-color: $background-color-editor-nav-hover;
+  }
+  a {
+    font-size: $font-size-navigation-bar;
+    text-transform: uppercase;
+    text-decoration: none;
 
-    ul {
-        flex-basis: 100%;
-        display: flex;
-        flex-direction: row;
-        align-content: center;
-    }
-    li {
-        flex: 1 1 none;
-        text-align: center;
-        cursor: pointer;
-        border-right: 1px solid $black;
-    }
-    li:last-child {
-        border-right: none;
-    }
-    li:hover {
-        background-color: $background-color-editor-nav-hover;
-    }
-    a {
-        font-size: $font-size-navigation-bar;
-        text-transform: uppercase;
-        text-decoration: none;
-
-        display: inline-block;
-        padding: 0.5em;
-    }
-    :visited {
-        color: $font-color-primary;
-    }
-    :link {
-        color: $font-color-primary;
-    }
+    display: inline-block;
+    padding: 0.5em;
+  }
+  :visited {
+    color: $font-color-primary;
+  }
+  :link {
+    color: $font-color-primary;
+  }
 }
 ```
 
@@ -79,7 +79,7 @@ This app was created with Create React App & the TypeScript template. Everything
 
 ### _Navigation.tsx_
 
-```tsx
+```typescript
 import React from 'react'
 import './navigationbar.scss'
 import { HeaderProps } from '../../../types/propTypes'
@@ -87,21 +87,21 @@ import { HeaderProps } from '../../../types/propTypes'
 import { Link } from 'react-router-dom'
 
 export const Navigation = ({ articleNavHeaders }: HeaderProps) => {
-    return (
-        <nav className="navigation-bar" data-testid="navigation-bar">
-            {articleNavHeaders && (
-                <ul>
-                    {articleNavHeaders.map((header, i) => (
-                        <li key={i}>
-                            <Link to={header.ref} data-testid={header.text}>
-                                {header.text}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
-            )}
-        </nav>
-    )
+  return (
+    <nav className="navigation-bar" data-testid="navigation-bar">
+      {articleNavHeaders && (
+        <ul>
+          {articleNavHeaders.map((header, i) => (
+            <li key={i}>
+              <Link to={header.ref} data-testid={header.text}>
+                {header.text}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
+    </nav>
+  )
 }
 ```
 
@@ -120,10 +120,17 @@ This project contains separate branches for development, master, and build.
 The CI/CD process of the site is roughly as follows:
 
 1. Changes are made into the development branch
-    - Every commit made into the branch is tested through GitHub actions. The application can also be tested locally through npm & react-jest
+
+-   Every commit made into the branch is tested through GitHub actions. The application can also be tested locally through npm & react-jest
+
 2. Pull requests are created against the master branch whenever a new version is ready
-    - Application is further tested with all new features
+
+-   Application is further tested with all new features
+
 3. A new pull request triggers a build into gh-pages branch
-    - GitHub Actions provides a module that enables this through npm & react-scripts
+
+-   GitHub Actions provides a module that enables this through npm & react-scripts
+
 4. New version is available online within seconds of accepted pull request
-    - Essentially, the CI/CD line allows Test-Driven-Development with an arbitary number of collaborators
+
+-   Essentially, the CI/CD line allows Test-Driven-Development with an arbitary number of collaborators

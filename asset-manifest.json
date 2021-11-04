@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.376098c6.chunk.css",
-    "main.js": "/static/js/main.e453515c.chunk.js",
-    "main.js.map": "/static/js/main.e453515c.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.9f4fca2f.js",
-    "runtime-main.js.map": "/static/js/runtime-main.9f4fca2f.js.map",
+    "main.css": "/static/css/main.d9499184.chunk.css",
+    "main.js": "/static/js/main.25081829.chunk.js",
+    "main.js.map": "/static/js/main.25081829.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f2bd8fda.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f2bd8fda.js.map",
     "static/css/2.a2825889.chunk.css": "/static/css/2.a2825889.chunk.css",
-    "static/js/2.d972eb81.chunk.js": "/static/js/2.d972eb81.chunk.js",
-    "static/js/2.d972eb81.chunk.js.map": "/static/js/2.d972eb81.chunk.js.map",
-    "static/js/3.e71a34b1.chunk.js": "/static/js/3.e71a34b1.chunk.js",
-    "static/js/3.e71a34b1.chunk.js.map": "/static/js/3.e71a34b1.chunk.js.map",
+    "static/js/2.2d7d6b66.chunk.js": "/static/js/2.2d7d6b66.chunk.js",
+    "static/js/2.2d7d6b66.chunk.js.map": "/static/js/2.2d7d6b66.chunk.js.map",
+    "static/js/3.a3afb45e.chunk.js": "/static/js/3.a3afb45e.chunk.js",
+    "static/js/3.a3afb45e.chunk.js.map": "/static/js/3.a3afb45e.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.a2825889.chunk.css.map": "/static/css/2.a2825889.chunk.css.map",
-    "static/css/main.376098c6.chunk.css.map": "/static/css/main.376098c6.chunk.css.map",
-    "static/js/2.d972eb81.chunk.js.LICENSE.txt": "/static/js/2.d972eb81.chunk.js.LICENSE.txt",
-    "static/media/crosswords.1e134990.md": "/static/media/crosswords.1e134990.md",
+    "static/css/main.d9499184.chunk.css.map": "/static/css/main.d9499184.chunk.css.map",
+    "static/js/2.2d7d6b66.chunk.js.LICENSE.txt": "/static/js/2.2d7d6b66.chunk.js.LICENSE.txt",
+    "static/media/crosswords.faa242ec.md": "/static/media/crosswords.faa242ec.md",
     "static/media/projects.33f719b1.md": "/static/media/projects.33f719b1.md",
-    "static/media/vilperi.5ce752fe.md": "/static/media/vilperi.5ce752fe.md",
+    "static/media/vilperi.65f3095b.md": "/static/media/vilperi.65f3095b.md",
     "static/media/vilperi.ab8dd659.glb": "/static/media/vilperi.ab8dd659.glb"
   },
   "entrypoints": [
-    "static/js/runtime-main.9f4fca2f.js",
+    "static/js/runtime-main.f2bd8fda.js",
     "static/css/2.a2825889.chunk.css",
-    "static/js/2.d972eb81.chunk.js",
-    "static/css/main.376098c6.chunk.css",
-    "static/js/main.e453515c.chunk.js"
+    "static/js/2.2d7d6b66.chunk.js",
+    "static/css/main.d9499184.chunk.css",
+    "static/js/main.25081829.chunk.js"
   ]
 }

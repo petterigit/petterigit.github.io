@@ -25,6 +25,7 @@
     li:last-child {
         border-right: none;
     }
+    li:focus-within,
     li:hover {
         background-color: $background-color-editor-nav-hover;
     }

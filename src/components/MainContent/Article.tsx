@@ -24,7 +24,7 @@ export const Article = ({ mdFile }: ArticleProps) => {
     return (
         <article data-testid="article">
             <div className="article">
-                <SimpleBar style={{ maxHeight: '60vh' }}>
+                <SimpleBar style={{ maxHeight: '80vh' }}>
                     <p
                         className="article-text"
                         dangerouslySetInnerHTML={{

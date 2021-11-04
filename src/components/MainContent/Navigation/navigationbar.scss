@@ -1,14 +1,19 @@
 @use '../../../styles/colors' as *;
 @use '../../../styles/fonts' as *;
+@use '../../../styles/media-breakpoints' as *;
 
 .navigation-bar {
     /* Layout */
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     background-color: $background-color-editor-nav;
     padding-left: 2em;
     padding-right: 2em;
+
+    @media (min-width: $tablet-bp) {
+        justify-content: flex-start;
+    }
 
     ul {
         flex-basis: 100%;

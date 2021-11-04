@@ -57,12 +57,17 @@
         float: right;
     }
     white-space: nowrap;
-
+    a {
+        text-decoration: none;
+    }
+    a::before {
+        margin-right: 2px;
+    }
     a[href^='mailto']::before {
-        content: '✉ ';
+        content: '\1F4E7';
     }
     a[href^='https://github.com/']::before
     {
-        content: '🖫 ';
+        content: '\1F4C2';
     }
 }

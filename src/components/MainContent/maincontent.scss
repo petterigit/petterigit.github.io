@@ -43,6 +43,9 @@
 }
 
 .app-main-header-text {
+    @media (min-width: $tablet-bp) {
+        font-size: $font-size-small-paragraph-desktop;
+    }
     font-size: $font-size-small-paragraph;
     margin: 0;
     margin-left: auto;

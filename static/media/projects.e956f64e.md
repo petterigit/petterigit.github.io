@@ -36,6 +36,9 @@ After seeing a few websites like this, few of my friends thought they could do b
 
 ## Sir Kälviäinen
 
-I've also got a Discord bot running, developed by the people on our own little server. You can find the source code here!
+I've also got a Discord bot running, developed by the people on our own little server.
+You can find the source code on <a href="https://github.com/petterigit/TheSir" target="_blank" rel="noreferrer">GitHub</a>!
 
-<a href="https://github.com/petterigit/TheSir" target="_blank" rel="noreferrer"> TheSir GitHub</a>
+It's filled with functionalities -- most of which have no apparent value to the them.. Here's a hangman game I made:
+
+<img src="./articleElements/hangman-256.png" alt="Hangman" />

@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.d9499184.chunk.css",
-    "main.js": "/static/js/main.25081829.chunk.js",
-    "main.js.map": "/static/js/main.25081829.chunk.js.map",
+    "main.js": "/static/js/main.96f2ab12.chunk.js",
+    "main.js.map": "/static/js/main.96f2ab12.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.f2bd8fda.js",
     "runtime-main.js.map": "/static/js/runtime-main.f2bd8fda.js.map",
     "static/css/2.a2825889.chunk.css": "/static/css/2.a2825889.chunk.css",
@@ -15,7 +15,7 @@
     "static/css/main.d9499184.chunk.css.map": "/static/css/main.d9499184.chunk.css.map",
     "static/js/2.2d7d6b66.chunk.js.LICENSE.txt": "/static/js/2.2d7d6b66.chunk.js.LICENSE.txt",
     "static/media/crosswords.faa242ec.md": "/static/media/crosswords.faa242ec.md",
-    "static/media/projects.33f719b1.md": "/static/media/projects.33f719b1.md",
+    "static/media/projects.e956f64e.md": "/static/media/projects.e956f64e.md",
     "static/media/vilperi.65f3095b.md": "/static/media/vilperi.65f3095b.md",
     "static/media/vilperi.ab8dd659.glb": "/static/media/vilperi.ab8dd659.glb"
   },
@@ -24,6 +24,6 @@
     "static/css/2.a2825889.chunk.css",
     "static/js/2.2d7d6b66.chunk.js",
     "static/css/main.d9499184.chunk.css",
-    "static/js/main.25081829.chunk.js"
+    "static/js/main.96f2ab12.chunk.js"
   ]
 }

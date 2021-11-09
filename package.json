@@ -1,5 +1,6 @@
 {
     "name": "vilperime",
+    "description": "Check out my website! Projects and more showcased here.",
     "version": "0.1.0",
     "private": true,
     "dependencies": {

@@ -5,7 +5,6 @@ GitHub
 
 <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> ![Typescript](./articleElements/ts-logo-128.svg 'Typescript')</a>
 <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> ![React](./articleElements/react-logo-128.png 'React')</a>
-<a href="https://jestjs.io/" target="_blank" rel="noreferrer"> ![Jest](./articleElements/jest-logo-128.png 'Jest')</a>
 <a href="https://sass-lang.com/" target="_blank" rel="noreferrer"> ![Sass](./articleElements/sass-logo-128.png 'Sass')</a>
 <a href="https://threejs.org/" target="_blank" rel="noreferrer"> ![ThreeJS](./articleElements/threejs-logo-128.png 'ThreeJS')</a>
 <a href="https://www.blender.org/" target="_blank" rel="noreferrer"> ![Blender](./articleElements/blender-logo-128.svg 'Blender')</a>
@@ -32,46 +31,46 @@ This app was created with Create React App & the TypeScript template. Everything
 @use '../../../styles/fonts' as *;
 
 .navigation-bar {
-  /* Layout */
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  background-color: $background-color-editor-nav;
-  padding-left: 2em;
-  padding-right: 2em;
-
-  ul {
-    flex-basis: 100%;
+    /* Layout */
     display: flex;
-    flex-direction: row;
-    align-content: center;
-  }
-  li {
-    flex: 1 1 none;
-    text-align: center;
-    cursor: pointer;
-    border-right: 1px solid $black;
-  }
-  li:last-child {
-    border-right: none;
-  }
-  li:hover {
-    background-color: $background-color-editor-nav-hover;
-  }
-  a {
-    font-size: $font-size-navigation-bar;
-    text-transform: uppercase;
-    text-decoration: none;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: $background-color-editor-nav;
+    padding-left: 2em;
+    padding-right: 2em;
 
-    display: inline-block;
-    padding: 0.5em;
-  }
-  :visited {
-    color: $font-color-primary;
-  }
-  :link {
-    color: $font-color-primary;
-  }
+    ul {
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+    }
+    li {
+        flex: 1 1 none;
+        text-align: center;
+        cursor: pointer;
+        border-right: 1px solid $black;
+    }
+    li:last-child {
+        border-right: none;
+    }
+    li:hover {
+        background-color: $background-color-editor-nav-hover;
+    }
+    a {
+        font-size: $font-size-navigation-bar;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        display: inline-block;
+        padding: 0.5em;
+    }
+    :visited {
+        color: $font-color-primary;
+    }
+    :link {
+        color: $font-color-primary;
+    }
 }
 ```
 
@@ -87,21 +86,21 @@ import { HeaderProps } from '../../../types/propTypes'
 import { Link } from 'react-router-dom'
 
 export const Navigation = ({ articleNavHeaders }: HeaderProps) => {
-  return (
-    <nav className="navigation-bar" data-testid="navigation-bar">
-      {articleNavHeaders && (
-        <ul>
-          {articleNavHeaders.map((header, i) => (
-            <li key={i}>
-              <Link to={header.ref} data-testid={header.text}>
-                {header.text}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
-    </nav>
-  )
+    return (
+        <nav className="navigation-bar" data-testid="navigation-bar">
+            {articleNavHeaders && (
+                <ul>
+                    {articleNavHeaders.map((header, i) => (
+                        <li key={i}>
+                            <Link to={header.ref} data-testid={header.text}>
+                                {header.text}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            )}
+        </nav>
+    )
 }
 ```
 

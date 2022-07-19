@@ -6,7 +6,9 @@
     margin: 0 auto;
     display: grid;
     grid-template-rows: 4fr 12fr 1fr;
-    overflow-y: hidden;
+    @media (min-width: $desktop-bp) {
+        overflow-y: hidden;
+    }
 }
 
 /* Layout styles for main elements*/

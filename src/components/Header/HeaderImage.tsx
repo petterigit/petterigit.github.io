@@ -1,5 +1,3 @@
-import './header.scss'
-
 import { WEBGL } from './WebGL.js'
 import { ThreeModel } from './ThreeModel'
 

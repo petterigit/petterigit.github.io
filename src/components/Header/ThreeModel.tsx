@@ -1,5 +1,3 @@
-import './header.scss'
-
 import { useRef, useEffect } from 'react'
 import * as TWEAK from 'tweakpane'
 import * as THREE from 'three'

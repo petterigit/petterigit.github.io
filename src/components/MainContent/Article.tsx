@@ -1,11 +1,9 @@
-import './maincontent.scss'
 import { ArticleProps } from '../../types/propTypes'
 
 import MarkdownIt from 'markdown-it'
 import SimpleBar from 'simplebar-react'
 import 'simplebar/dist/simplebar.min.css'
 
-import '../../styles/prism.css'
 import { useEffect, useState } from 'react'
 
 /* Add prism for typescript when calling Window */

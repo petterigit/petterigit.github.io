@@ -1,5 +1,3 @@
-import './maincontent.scss'
-import React from 'react'
 import { useEffect, useState } from 'react'
 import { ArticleHeaderProps } from '../../types/propTypes'
 

@@ -2,21 +2,27 @@
 @use '../../styles/fonts' as *;
 @use '../../styles/media-breakpoints' as *;
 
-.app-main {
+
+// Window height = header + navigation + article height
+$window-height: 80vh;
+$window-header-height: 5vh;
+$window-navigation-height: 10vh;
+$window-article-height: 65vh;
+
+.article-window {
     background-color: $background-color-editor;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    max-height: 100vh;
+    max-height: $window-height;
     img {
         max-width: 80vw;
     }
 }
 
 .article {
-    max-height: 80vh;
-    min-height: 256px;
+    max-height: $window-article-height;
     overflow-y: auto;
-    
+    padding-bottom: 1em;
     /* Table styling */
     table,
     th,
@@ -39,6 +45,7 @@
     justify-content: center;
     padding: 0.2em 1em;
     font-size: $font-size-small-paragraph;
+    max-height: $window-header-height;
 }
 
 .app-main-header-text {

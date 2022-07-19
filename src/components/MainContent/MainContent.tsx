@@ -9,7 +9,7 @@ import { MainContentProps } from '../../types/propTypes'
 
 export const MainContent = ({ toggleArticle }: MainContentProps) => {
     return (
-        <div className="app-main" data-testid="mainContent">
+        <div className="article-window">
             <ArticleHeader toggleArticle={toggleArticle} />
             <Navigation articleNavHeaders={articleNavHeaders} />
             <Switch>

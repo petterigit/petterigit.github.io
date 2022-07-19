@@ -12,6 +12,9 @@
         flex-wrap: nowrap;
     }
     flex-direction: row;
+
+    
+    scroll-snap-align: start;
 }
 
 /*  [-- Headertext takes 67% if possible --] [- HeaderImage 33% -]

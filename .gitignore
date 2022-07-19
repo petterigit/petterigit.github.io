@@ -11,6 +11,11 @@
 # production
 /build
 
+# static images & other files
+/public/images
+/public/articleElements
+/public/models
+
 # misc
 .DS_Store
 .env.local

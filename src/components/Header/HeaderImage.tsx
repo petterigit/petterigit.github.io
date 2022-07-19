@@ -1,18 +1,16 @@
-import './header.scss'
-
-import { WEBGL } from './WebGL.js'
+import { isWebGLAvailable } from '../../utils/checkWebGL'
 import { ThreeModel } from './ThreeModel'
 
 export const HeaderImage = () => {
     return (
         <div className="header-image-container" data-testid="headerImage">
-            {WEBGL.isWebGLAvailable() ? (
+            {isWebGLAvailable() ? (
                 <ThreeModel />
             ) : (
                 <p>
-                    {' '}
-                    Unable to use WEBGL to load graphics. For more information,
-                    visit{' '}
+                    Unable to use WEBGL to load a sweet 3D koala bear. WEBGL may
+                    be disabled in your browser. For more information,
+                    visit&nbsp;
                     <a href="https://get.webgl.org/">https://get.webgl.org/</a>
                 </p>
             )}

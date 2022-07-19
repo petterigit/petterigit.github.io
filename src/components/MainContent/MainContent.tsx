@@ -2,12 +2,9 @@ import './maincontent.scss'
 import { Article } from './Article'
 import { Navigation } from './Navigation/Navigation'
 import { ArticleHeader } from './ArticleHeader'
-
-import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-
-import { articles } from '../../static/articles/articleContent'
-import { articleNavHeaders } from '../../static/articles/articleContent'
+import { articles } from '../../utils/articleContent'
+import { articleNavHeaders } from '../../utils/articleContent'
 import { MainContentProps } from '../../types/propTypes'
 
 export const MainContent = ({ toggleArticle }: MainContentProps) => {

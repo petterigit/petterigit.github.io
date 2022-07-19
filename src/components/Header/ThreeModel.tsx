@@ -1,23 +1,19 @@
-import './header.scss'
-
 import { useRef, useEffect } from 'react'
 import * as TWEAK from 'tweakpane'
 import * as THREE from 'three'
 
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
-// @ts-ignore
-import vilperi from './vilperi.glb'
-
 const sizes = { width: 200, height: 250 }
 
-type tweakPaneTypes = {
+interface TweakPaneTypes {
     pane: TWEAK.Pane
-    light: THREE.PointLight
+    lights: THREE.PointLight[]
     camera: THREE.PerspectiveCamera
 }
 
-const DEBUG = false
+const DEBUG = process.env.REACT_APP_DEBUG
+console.log(DEBUG)
 
 export const ThreeModel = () => {
     const mountRef = useRef<HTMLDivElement>(document.createElement('div'))
@@ -34,7 +30,7 @@ export const ThreeModel = () => {
 
         const loader = new GLTFLoader()
         loader.load(
-            vilperi,
+            `${process.env.PUBLIC_URL}/models/vilperi.glb`,
             function (gltf) {
                 let model = gltf.scene
                 scene.add(model)
@@ -44,9 +40,7 @@ export const ThreeModel = () => {
                 const clip = THREE.AnimationClip.findByName(clips, 'Idle')
                 const action = mixer.clipAction(clip)
                 action.play()
-
                 tick()
-                //createGUI( model, gltf.animations );
             },
             undefined,
             function (e) {
@@ -57,19 +51,9 @@ export const ThreeModel = () => {
         scene.add(light1)
 
         /* Debug */
-        if (DEBUG) {
-            const pane = new TWEAK.Pane()
-            addTweakPane({ pane: pane, light: light1, camera: camera })
-            const pointLightHelper1 = new THREE.PointLightHelper(light1, 0.1)
-            scene.add(pointLightHelper1)
-            const pointLightHelper2 = new THREE.PointLightHelper(light2, 0.1)
-            scene.add(pointLightHelper2)
-        }
-
-        /* Animations */
+        if (DEBUG === 'true') addDebugFunctions(scene, [light1, light2], camera)
 
         /* Render */
-
         const tick = () => {
             const deltaTime = clock.getDelta()
             if (mixer) {
@@ -122,25 +106,53 @@ const createLight = (posX: number, posY: number, posZ: number) => {
     return pointLight
 }
 
-const addTweakPane = ({ pane, light, camera }: tweakPaneTypes) => {
+const addDebugFunctions = (
+    scene: THREE.Scene,
+    tweakedLights: THREE.PointLight[],
+    tweakedCamera: THREE.PerspectiveCamera
+): void => {
+    const pane = new TWEAK.Pane()
+    addTweakPane({ pane: pane, lights: tweakedLights, camera: tweakedCamera })
+    tweakedLights.forEach((light) => {
+        const helper = new THREE.PointLightHelper(light, 0.1)
+        scene.add(helper)
+    })
+}
+
+const presetString = (title: string, value: string): string => {
+    return `${title} - ${value}`
+}
+
+const addTweakPane = ({ pane, lights, camera }: TweakPaneTypes) => {
     /* Lighting */
-    const lightingFolder = pane.addFolder({ title: 'Lighting' })
-    lightingFolder.addInput(light.position, 'x', {
-        min: -4,
-        max: 4,
-        step: 0.01,
+    lights.forEach((light, i) => {
+        const title = `Lightning ${i}`
+        const lightingFolder = pane.addFolder({ title: title })
+        lightingFolder.addInput(light.position, 'x', {
+            min: -4,
+            max: 4,
+            step: 0.01,
+            presetKey: presetString(title, 'x'),
+        })
+        lightingFolder.addInput(light.position, 'y', {
+            min: 0,
+            max: 10,
+            step: 0.01,
+            presetKey: presetString(title, 'y'),
+        })
+        lightingFolder.addInput(light.position, 'z', {
+            min: -0.5,
+            max: 10,
+            step: 0.01,
+            presetKey: presetString(title, 'z'),
+        })
+        lightingFolder.addInput(light, 'intensity', {
+            min: 0,
+            max: 10,
+            step: 0.1,
+            presetKey: presetString(title, 'intensity'),
+        })
     })
-    lightingFolder.addInput(light.position, 'y', {
-        min: 0,
-        max: 10,
-        step: 0.01,
-    })
-    lightingFolder.addInput(light.position, 'z', {
-        min: -0.5,
-        max: 10,
-        step: 0.01,
-    })
-    lightingFolder.addInput(light, 'intensity', { min: 0, max: 10, step: 0.1 })
 
     /* Camera */
     const cameraFolder = pane.addFolder({ title: 'Camera' })
@@ -148,31 +160,37 @@ const addTweakPane = ({ pane, light, camera }: tweakPaneTypes) => {
         min: -1,
         max: 4,
         step: 0.001,
+        presetKey: presetString('camera', 'positionX'),
     })
     cameraFolder.addInput(camera.position, 'y', {
         min: -1,
         max: 4,
         step: 0.001,
+        presetKey: presetString('camera', 'positionY'),
     })
     cameraFolder.addInput(camera.position, 'z', {
         min: -1,
         max: 10,
         step: 0.001,
+        presetKey: presetString('camera', 'positionZ'),
     })
     cameraFolder.addInput(camera.rotation, 'x', {
         min: -1,
         max: 1,
         step: 0.001,
+        presetKey: presetString('camera', 'rotationX'),
     })
     cameraFolder.addInput(camera.rotation, 'y', {
         min: -1,
         max: 1,
         step: 0.001,
+        presetKey: presetString('camera', 'rotationY'),
     })
     cameraFolder.addInput(camera.rotation, 'z', {
         min: -1,
         max: 1,
         step: 0.001,
+        presetKey: presetString('camera', 'rotationZ'),
     })
 
     const btn = pane.addButton({

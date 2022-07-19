@@ -1,5 +1,3 @@
-import './header.scss'
-
 export const HeaderText = () => {
     return (
         <div className="header-text-container" data-testid="headerText">

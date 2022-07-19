@@ -1,5 +1,4 @@
 import { EasterArticleProps } from '../../types/propTypes'
-import openWindow from './../../static/images/openWindow.png'
 
 export const EasterArticle = ({ toggleArticle }: EasterArticleProps) => {
     return (
@@ -8,7 +7,7 @@ export const EasterArticle = ({ toggleArticle }: EasterArticleProps) => {
             <input
                 alt="Re-open window"
                 type="image"
-                src={openWindow}
+                src={`${process.env.PUBLIC_URL}/images/openWindow.png`}
                 onClick={toggleArticle}
             />
         </div>

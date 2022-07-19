@@ -7,7 +7,6 @@ import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
 // @ts-ignore
-import vilperi from './vilperi.glb'
 
 const sizes = { width: 200, height: 250 }
 
@@ -34,7 +33,7 @@ export const ThreeModel = () => {
 
         const loader = new GLTFLoader()
         loader.load(
-            vilperi,
+            `${process.env.PUBLIC_URL}/models/vilperi.glb`,
             function (gltf) {
                 let model = gltf.scene
                 scene.add(model)

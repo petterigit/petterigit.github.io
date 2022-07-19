@@ -1,17 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.c6663034.css",
-    "main.js": "/static/js/main.9caf8ac4.js",
-    "static/media/vilperi.glb": "/static/media/vilperi.ab8dd659ef6647485d73.glb",
-    "static/media/crosswords.md": "/static/media/crosswords.faa242ec60f0e0aa7cf2.md",
-    "static/media/vilperi.md": "/static/media/vilperi.15e2233e1db1b54e16d2.md",
-    "static/media/projects.md": "/static/media/projects.e956f64e121efb461835.md",
+    "main.css": "/static/css/main.a360e4ba.css",
+    "main.js": "/static/js/main.19fb99d2.js",
     "index.html": "/index.html",
-    "main.c6663034.css.map": "/static/css/main.c6663034.css.map",
-    "main.9caf8ac4.js.map": "/static/js/main.9caf8ac4.js.map"
+    "main.a360e4ba.css.map": "/static/css/main.a360e4ba.css.map",
+    "main.19fb99d2.js.map": "/static/js/main.19fb99d2.js.map"
   },
   "entrypoints": [
-    "static/css/main.c6663034.css",
-    "static/js/main.9caf8ac4.js"
+    "static/css/main.a360e4ba.css",
+    "static/js/main.19fb99d2.js"
   ]
 }

@@ -32,7 +32,10 @@ export const ArticleHeader = ({ toggleArticle }: ArticleHeaderProps) => {
     return (
         <div className="app-main-header">
             <p className="app-main-header-text"> vilperi.me {modifiedDate}</p>
-            <button onClick={toggleArticle} className="app-main-header-exit">
+            <button
+                onClick={toggleArticle}
+                className="app-main-header-exit unstyled-button"
+            >
                 X
             </button>
         </div>

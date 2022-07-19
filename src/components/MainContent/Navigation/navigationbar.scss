@@ -1,7 +1,6 @@
 @use '../../../styles/colors' as *;
 @use '../../../styles/fonts' as *;
 @use '../../../styles/media-breakpoints' as *;
-@use '../maincontent' as *;
 
 .navigation-bar {
     /* Layout */
@@ -9,7 +8,6 @@
     background-color: $background-color-editor-nav;
     padding-left: 2em;
     padding-right: 2em;
-    max-height: $window-navigation-height;
     ul {
         flex-basis: 100%;
         display: flex;

@@ -3,26 +3,19 @@
 @use '../../styles/media-breakpoints' as *;
 
 
-// Window height = header + navigation + article height
-$window-height: 80vh;
-$window-header-height: 5vh;
-$window-navigation-height: 10vh;
-$window-article-height: 65vh;
-
 .article-window {
+    height: max-content;
     background-color: $background-color-editor;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    max-height: $window-height;
+    max-width: 100vw;
     img {
         max-width: 80vw;
     }
 }
 
 .article {
-    max-height: $window-article-height;
     overflow-y: auto;
-    padding-bottom: 1em;
     /* Table styling */
     table,
     th,
@@ -45,7 +38,6 @@ $window-article-height: 65vh;
     justify-content: center;
     padding: 0.2em 1em;
     font-size: $font-size-small-paragraph;
-    max-height: $window-header-height;
 }
 
 .app-main-header-text {

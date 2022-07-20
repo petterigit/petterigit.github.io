@@ -20,11 +20,12 @@ export const Article = (props: ArticleProps) => {
     )
 
     const articleClass = (size: ArticleSize): string => {
+        const articleClass = 'article'
         switch (size) {
             case ArticleSize.windowed:
-                return 'article'
+                return `${articleClass} article-layout`
             case ArticleSize.full:
-                return 'article-enlarged'
+                return `${articleClass} article-layout-enlarged`
         }
     }
 

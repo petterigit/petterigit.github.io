@@ -3,12 +3,14 @@
 @use '../../styles/media-breakpoints' as *;
 
 .article-window {
+    position: relative;
     background-color: $background-color-editor;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: inset 0px -32px 32px -4px lighten(#0b0e11, 5);
 }
-
 .article {    
+    margin-bottom: 1em;
     /* Table styling */
     table,
     th,

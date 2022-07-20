@@ -35,21 +35,24 @@
 
 .app-main-header {
     display: flex;
+    font-size: $font-size-small-paragraph-desktop;
+}
+
+.app-main-header-container {
+    flex: 1;
+    display: flex;
     justify-content: center;
-    padding: 0.2em 1em;
-    font-size: $font-size-small-paragraph;
+    gap: 0.5em;
+    padding: 0 0.5em;
+    text-align: center;
 }
 
 .app-main-header-text {
-    @media (min-width: $tablet-bp) {
-        font-size: $font-size-small-paragraph-desktop;
-    }
     margin: 0;
-    margin-left: auto;
+    font-size: inherit;
 }
 
-.app-main-header-exit {
-    display: inline;
+.app-main-header-button {
     margin-left: auto;
 }
 

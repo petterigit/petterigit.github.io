@@ -29,13 +29,17 @@ export const ArticleHeader = ({ toggleArticle }: ArticleHeaderProps) => {
 
     return (
         <div className="app-main-header">
-            <p className="app-main-header-text"> vilperi.me {modifiedDate}</p>
-            <button
-                onClick={toggleArticle}
-                className="app-main-header-exit unstyled-button"
-            >
-                X
-            </button>
+            <div className="app-main-header-buttons app-main-header-container"></div>
+            <p className="app-main-header-text app-main-header-container">
+                {' '}
+                vilperi.me {modifiedDate}
+            </p>
+            <div className="app-main-header-container">
+                <button className="unstyled-button margin-left-auto">◻</button>
+                <button onClick={toggleArticle} className="unstyled-button">
+                    X
+                </button>
+            </div>
         </div>
     )
 }

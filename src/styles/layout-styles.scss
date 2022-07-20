@@ -1,9 +1,42 @@
+@use './media-breakpoints' as *;
+
+$app-max-width-dt: 1080px;
+$app-max-height-dt: 1000px;
+
 .app {
     height: 100vh;
-    max-width: 1080px;
-    margin: 0 auto;
+    width: 100%;
     display: grid;
-    grid-template-rows: 4fr 12fr 1fr;
+    grid-template-rows: min-content 1fr min-content;
+    grid-template-columns: 100%;
+    // Extra 20px to account for largest scrollbar size (17px)
+    @media (min-width: calc($app-max-width-dt + 20px)) {
+        width: $app-max-width-dt;
+        /* Calculates margins no avoid snapping on*/
+        margin-left: auto;
+        margin-right: calc(100% - ($app-max-width-dt + 100vw)/2)
+        //margin-left: calc(1080px - 100vw/2);
+        //margin-right: calc(100% - (1080px + 100vw)/2); 
+    }
+}
+
+.article-window-layout {
+    height: fit-content;
+}
+
+.article-layout {
+    overflow: auto;
+    max-height: none;
+
+    // If enough space for 
+    @media (min-height: $app-max-height-dt) and (min-width: $desktop-bp) {
+        max-height: 55vh;
+    }
+}
+
+.article-layout-enlarged {
+    overflow: auto;
+    max-height: 100%;
 }
 
 .article-2-column-grid-layout {

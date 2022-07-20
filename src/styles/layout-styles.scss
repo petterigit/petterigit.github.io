@@ -1,7 +1,7 @@
 @use './media-breakpoints' as *;
 
 $app-max-width-dt: 1080px;
-$app-max-height-dt: 1000px;
+$app-max-height-dt: 900px;
 
 .app {
     height: 100vh;
@@ -30,7 +30,7 @@ $app-max-height-dt: 1000px;
 
     // If enough space for 
     @media (min-height: $app-max-height-dt) and (min-width: $desktop-bp) {
-        max-height: 55vh;
+        max-height: 50vh;
     }
 }
 

@@ -1,7 +1,5 @@
 @use './media-breakpoints' as *;
 
-$article-height: 400px;
-
 .app {
     height: 100vh;
     max-width: 1080px;
@@ -11,11 +9,16 @@ $article-height: 400px;
 }
 
 .article-window {
-    height: max-content;
+    height: fit-content;
 }
 
 .article {
-    height: 50vh;
+    overflow: auto;
+    max-height: none;
+
+    @media (min-height: 1000px) {
+        max-height: 55vh;
+    }
 }
 
 .article-2-column-grid-layout {

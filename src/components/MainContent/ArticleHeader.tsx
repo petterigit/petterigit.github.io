@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
 import { ArticleHeaderProps } from '../../types/propTypes'
 
-export const ArticleHeader = ({ toggleArticle }: ArticleHeaderProps) => {
+export const ArticleHeader = (props: ArticleHeaderProps) => {
+    const { toggleArticle, setArticleSize } = props
+
     const [modifiedDate, setModifiedDate] = useState('')
 
     useEffect(() => {
@@ -15,7 +17,7 @@ export const ArticleHeader = ({ toggleArticle }: ArticleHeaderProps) => {
             if (mounted) {
                 let date = new Date(json.commit.author.date)
                 let dateStr = date.toDateString()
-                setModifiedDate('- last modified: ' + dateStr)
+                setModifiedDate(dateStr)
             }
         }
 
@@ -29,13 +31,21 @@ export const ArticleHeader = ({ toggleArticle }: ArticleHeaderProps) => {
 
     return (
         <div className="app-main-header">
-            <p className="app-main-header-text"> vilperi.me {modifiedDate}</p>
-            <button
-                onClick={toggleArticle}
-                className="app-main-header-exit unstyled-button"
-            >
-                X
-            </button>
+            <div className="app-main-header-buttons app-main-header-container"></div>
+            <p className="app-main-header-text app-main-header-container">
+                vilperi.me - last modified: {modifiedDate}
+            </p>
+            <div className="app-main-header-container">
+                <button
+                    onClick={setArticleSize}
+                    className="unstyled-button margin-left-auto"
+                >
+                    ◻
+                </button>
+                <button onClick={toggleArticle} className="unstyled-button">
+                    X
+                </button>
+            </div>
         </div>
     )
 }

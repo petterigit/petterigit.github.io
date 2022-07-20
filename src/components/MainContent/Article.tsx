@@ -1,10 +1,9 @@
 import { ArticleProps } from '../../types/propTypes'
 
 import MarkdownIt from 'markdown-it'
-import SimpleBar from 'simplebar-react'
-import 'simplebar/dist/simplebar.min.css'
 
 import { useEffect, useState } from 'react'
+import { ArticleSize } from '../../types/enums'
 
 /* Add prism for typescript when calling Window */
 declare global {
@@ -13,10 +12,22 @@ declare global {
     }
 }
 
-export const Article = ({ mdFile }: ArticleProps) => {
+export const Article = (props: ArticleProps) => {
+    const { mdFile, articleSize } = props
+
     const [articleHtml, setArticleHtml] = useState(
         '<h2> Getting article.. </h2>'
     )
+
+    const articleClass = (size: ArticleSize): string => {
+        const articleClass = 'article'
+        switch (size) {
+            case ArticleSize.windowed:
+                return `${articleClass} article-layout`
+            case ArticleSize.full:
+                return `${articleClass} article-layout-enlarged`
+        }
+    }
 
     useEffect(() => {
         const md = new MarkdownIt({ html: true })
@@ -30,17 +41,13 @@ export const Article = ({ mdFile }: ArticleProps) => {
     }, [mdFile])
 
     return (
-        <article data-testid="article">
-            <div className="article">
-                <SimpleBar style={{ maxHeight: '80vh' }}>
-                    <p
-                        className="article-text"
-                        dangerouslySetInnerHTML={{
-                            __html: articleHtml,
-                        }}
-                    ></p>
-                </SimpleBar>
-            </div>
+        <article className={articleClass(articleSize)}>
+            <p
+                className="article-text"
+                dangerouslySetInnerHTML={{
+                    __html: articleHtml,
+                }}
+            ></p>
         </article>
     )
 }

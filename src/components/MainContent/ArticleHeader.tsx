@@ -15,7 +15,7 @@ export const ArticleHeader = ({ toggleArticle }: ArticleHeaderProps) => {
             if (mounted) {
                 let date = new Date(json.commit.author.date)
                 let dateStr = date.toDateString()
-                setModifiedDate('- last modified: ' + dateStr)
+                setModifiedDate(dateStr)
             }
         }
 
@@ -31,8 +31,7 @@ export const ArticleHeader = ({ toggleArticle }: ArticleHeaderProps) => {
         <div className="app-main-header">
             <div className="app-main-header-buttons app-main-header-container"></div>
             <p className="app-main-header-text app-main-header-container">
-                {' '}
-                vilperi.me {modifiedDate}
+                vilperi.me - last modified: {modifiedDate}
             </p>
             <div className="app-main-header-container">
                 <button className="unstyled-button margin-left-auto">◻</button>

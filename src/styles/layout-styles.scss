@@ -1,72 +1,21 @@
 @use './media-breakpoints' as *;
 
-$maxwidth-dt: 80vw;
+$article-height: 400px;
 
 .app {
     height: 100vh;
     max-width: 1080px;
     margin: 0 auto;
     display: grid;
-    grid-template-rows: 4fr 12fr 1fr;
-    @media (min-width: $desktop-bp) {
-        overflow-y: hidden;
-    }
+    grid-template-rows: min-content 1fr min-content;
 }
 
-/* Layout styles for main elements*/
-
-.header {
-    max-width: 100vw;
-    max-height: 100vh;
-    @media (min-width: $phone-bp) {
-        max-height: 100vh;
-    }
-
-    @media (min-width: $tablet-bp) {
-        max-height: 100vh;
-    }
-
-    @media (min-width: $desktop-bp) {
-        max-height: 30vh;
-        max-width: $maxwidth-dt;
-    }
+.article-window {
+    height: max-content;
 }
 
-/* !! Sets max height of the inner article.
- * Keep enough for em sized window header + nav
- */
-.article{
-    max-width: 100vw;
-    max-height: 80vh;
-    @media (min-width: $phone-bp) {
-        max-height: 80vh;
-    }
-
-    @media (min-width: $tablet-bp) {
-        max-height: 80vh;
-    }
-
-    @media (min-width: $desktop-bp) {
-        max-height: 50vh;
-        max-width: $maxwidth-dt;
-    }
-}
-
-.footer {
-    max-width: 100vw;
-    max-height: 10vh;
-    @media (min-width: $phone-bp) {
-        max-height: 10vh;
-    }
-
-    @media (min-width: $tablet-bp) {
-        max-height: 10vh;
-    }
-
-    @media (min-width: $desktop-bp) {
-        max-height: 10vh;
-        max-width: $maxwidth-dt;
-    }
+.article {
+    height: 50vh;
 }
 
 .article-2-column-grid-layout {

@@ -42,13 +42,6 @@
     }
 }
 
-.header-image {
-    display: block;
-    width: 16em;
-    height: 16em;
-    border-radius: 10%;
-}
-
 .header-text {
     @media (min-width: $tablet-bp) {
         text-align: right;

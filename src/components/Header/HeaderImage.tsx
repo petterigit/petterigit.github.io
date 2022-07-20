@@ -3,7 +3,7 @@ import { ThreeModel } from './ThreeModel'
 
 export const HeaderImage = () => {
     return (
-        <div className="header-image-container" data-testid="headerImage">
+        <div className="header-image-container">
             {isWebGLAvailable() ? (
                 <ThreeModel />
             ) : (

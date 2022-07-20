@@ -8,7 +8,7 @@
     grid-template-rows: min-content 1fr min-content;
 }
 
-.article-window {
+.article-window-layout {
     height: fit-content;
 }
 
@@ -19,6 +19,11 @@
     @media (min-height: 1000px) {
         max-height: 55vh;
     }
+}
+
+.article-enlarged {
+    overflow: auto;
+    max-height: 100%;
 }
 
 .article-2-column-grid-layout {

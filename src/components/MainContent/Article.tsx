@@ -3,6 +3,7 @@ import { ArticleProps } from '../../types/propTypes'
 import MarkdownIt from 'markdown-it'
 
 import { useEffect, useState } from 'react'
+import { ArticleSize } from '../../types/enums'
 
 /* Add prism for typescript when calling Window */
 declare global {
@@ -11,10 +12,21 @@ declare global {
     }
 }
 
-export const Article = ({ mdFile }: ArticleProps) => {
+export const Article = (props: ArticleProps) => {
+    const { mdFile, articleSize } = props
+
     const [articleHtml, setArticleHtml] = useState(
         '<h2> Getting article.. </h2>'
     )
+
+    const articleClass = (size: ArticleSize): string => {
+        switch (size) {
+            case ArticleSize.windowed:
+                return 'article'
+            case ArticleSize.full:
+                return 'article-enlarged'
+        }
+    }
 
     useEffect(() => {
         const md = new MarkdownIt({ html: true })
@@ -28,7 +40,7 @@ export const Article = ({ mdFile }: ArticleProps) => {
     }, [mdFile])
 
     return (
-        <article className="article">
+        <article className={articleClass(articleSize)}>
             <p
                 className="article-text"
                 dangerouslySetInnerHTML={{

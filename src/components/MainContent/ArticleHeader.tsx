@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
 import { ArticleHeaderProps } from '../../types/propTypes'
 
-export const ArticleHeader = ({ toggleArticle }: ArticleHeaderProps) => {
+export const ArticleHeader = (props: ArticleHeaderProps) => {
+    const { toggleArticle, setArticleSize } = props
+
     const [modifiedDate, setModifiedDate] = useState('')
 
     useEffect(() => {
@@ -34,7 +36,12 @@ export const ArticleHeader = ({ toggleArticle }: ArticleHeaderProps) => {
                 vilperi.me - last modified: {modifiedDate}
             </p>
             <div className="app-main-header-container">
-                <button className="unstyled-button margin-left-auto">◻</button>
+                <button
+                    onClick={setArticleSize}
+                    className="unstyled-button margin-left-auto"
+                >
+                    ◻
+                </button>
                 <button onClick={toggleArticle} className="unstyled-button">
                     X
                 </button>

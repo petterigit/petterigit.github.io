@@ -1,9 +1,13 @@
+import { ArticleSize } from './enums'
+
 export type ArticleProps = {
     mdFile: string
+    articleSize: ArticleSize
 }
 
 export type ArticleHeaderProps = {
     toggleArticle: () => void
+    setArticleSize: () => void
 }
 
 export type EasterArticleProps = {

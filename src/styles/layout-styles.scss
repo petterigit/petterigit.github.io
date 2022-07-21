@@ -25,7 +25,8 @@ $app-max-height-dt: 900px;
 }
 
 .article-layout {
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     max-height: none;
 
     // If enough space for 

@@ -1,7 +1,7 @@
 import { ArticleProps } from '../../types/propTypes'
 
 import MarkdownIt from 'markdown-it'
-
+import DOMPurify from 'dompurify'
 import { useEffect, useState } from 'react'
 import { ArticleSize } from '../../types/enums'
 
@@ -35,7 +35,8 @@ export const Article = (props: ArticleProps) => {
             .then((response) => response.text())
             .then((text) => {
                 const htmlString = md.render(text)
-                setArticleHtml(htmlString)
+                const sanitizedHtml = DOMPurify.sanitize(htmlString)
+                setArticleHtml(sanitizedHtml)
                 window.Prism?.highlightAll()
             })
     }, [mdFile])

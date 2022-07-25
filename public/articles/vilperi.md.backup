@@ -109,7 +109,7 @@ export const Navigation = ({ articleNavHeaders }: HeaderProps) => {
 
 ---
 
-Did you see the code syntax highlighting? I know, it's cool. Here's how the article component functions. MarkdownIt is used to process the articles. Prism.JS is used for syntax highlighting. DOMPurify is used to sanitize the HTML since innerHTML of the article needs to be accessed.
+Did you see the code syntax highlighting? I know, it's cool. Here's how the article component functions. MarkdownIt is used to process the articles. Prism.JS is used for syntax highlighting.
 
 ### _Article.tsx_
 
@@ -137,8 +137,7 @@ export const Article = (props: ArticleProps) => {
             .then((response) => response.text())
             .then((text) => {
                 const htmlString = md.render(text)
-                const sanitizedHtml = DOMPurify.sanitize(htmlString)
-                setArticleHtml(sanitizedHtml)
+                setArticleHtml(htmlString)
                 window.Prism?.highlightAll()
             })
     }, [mdFile])

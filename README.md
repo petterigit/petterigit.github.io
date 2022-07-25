@@ -1,6 +1,10 @@
 # Hello!
 
-This is the repository for my suuuuper cool website Vilperi.me.
+https://petterigit.github.io/
+
+
+This is repository for my own website. Website is hosted by GitHub Actions. CI/CD maintained through GitHub Actions.
+
 
 ![Build](https://github.com/petterigit/petterigit.github.io/actions/workflows/build.yml/badge.svg)
 

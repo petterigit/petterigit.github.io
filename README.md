@@ -1,6 +1,8 @@
 # Hello!
 
-This is the repository for my suuuuper cool website Vilperi.me.
+This is repository for my own website. Website runs through Github Pages.
+Access it here: https://petterigit.github.io/#/
+
 
 ![Build](https://github.com/petterigit/petterigit.github.io/actions/workflows/build.yml/badge.svg)
 
